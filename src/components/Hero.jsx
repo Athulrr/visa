@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import heroSectionImage from '../assets/hero section.png'
+import heroSectionImage from '../assets/hero.png'
 import Navbar from './Navbar'
 
 const Hero = () => {
