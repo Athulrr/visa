@@ -18,6 +18,31 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    // Close mobile menu after clicking
+    setIsMenuOpen(false)
+  }
+
+  // Scroll to Visabot section
+  const scrollToVisabot = () => {
+    const visabotSection = document.querySelector('.visabot-container')
+    if (visabotSection) {
+      visabotSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className="header">
       <div className="logo">
@@ -27,15 +52,63 @@ const Navbar = () => {
       
       {/* Desktop Navigation */}
       <nav className="navigation desktop-nav">
-        <a href="#" className="nav-link">OUR SERVICES</a>
-        <a href="#" className="nav-link">HOW TO START</a>
-        <a href="#" className="nav-link">REVIEWS</a>
-        <a href="#" className="nav-link">DOCUMENTS</a>
-        <a href="#" className="nav-link">FAQ</a>
+        <a 
+          href="#services" 
+          className="nav-link"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection('services')
+          }}
+        >
+          OUR SERVICES
+        </a>
+        <a 
+          href="#visabot" 
+          className="nav-link"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToVisabot()
+          }}
+        >
+          HOW TO START
+        </a>
+        <a 
+          href="#reviews" 
+          className="nav-link"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection('reviews')
+          }}
+        >
+          REVIEWS
+        </a>
+        <a 
+          href="#documents" 
+          className="nav-link"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection('documents')
+          }}
+        >
+          DOCUMENTS
+        </a>
+        <a 
+          href="#faq" 
+          className="nav-link"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection('faq')
+          }}
+        >
+          FAQ
+        </a>
       </nav>
       
       <div className="header-right">
-        <button className="cta-button">
+        <button 
+          className="cta-button"
+          onClick={scrollToVisabot}
+        >
           TRY VISABOT
           <img src={forwardImage} alt="Forward" className="arrow" />
         </button>
@@ -52,11 +125,56 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="navigation mobile-nav">
-          <a href="#" className="nav-link">OUR SERVICES</a>
-          <a href="#" className="nav-link">HOW TO START</a>
-          <a href="#" className="nav-link">REVIEWS</a>
-          <a href="#" className="nav-link">DOCUMENTS</a>
-          <a href="#" className="nav-link">FAQ</a>
+          <a 
+            href="#services" 
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('services')
+            }}
+          >
+            OUR SERVICES
+          </a>
+          <a 
+            href="#visabot" 
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToVisabot()
+            }}
+          >
+            HOW TO START
+          </a>
+          <a 
+            href="#reviews" 
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('reviews')
+            }}
+          >
+            REVIEWS
+          </a>
+          <a 
+            href="#documents" 
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('documents')
+            }}
+          >
+            DOCUMENTS
+          </a>
+          <a 
+            href="#faq" 
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('faq')
+            }}
+          >
+            FAQ
+          </a>
         </nav>
       )}
     </header>

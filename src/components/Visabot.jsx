@@ -12,7 +12,7 @@ const Visabot = () => {
       </div>
       
       <div className="visabot-content-section">
-        <h2 className="visabot-main-heading">Meet Visabot</h2>
+        <h2 className="visabot-main-heading" style={{ marginTop: '40px' }}>Meet Visabot</h2>
         <p className="visabot-description">
           Our AI-powered assistant that helps you find and book visa appointments automatically. 
           No more endless refreshing or waiting in queues.
