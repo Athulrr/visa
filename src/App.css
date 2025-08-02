@@ -16,7 +16,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: #FAF8ED;
-  color: #1a3a2e;
+  color: #034833;
   line-height: 1.6;
 }
 
@@ -1087,7 +1087,7 @@ body {
     align-items: center;
     padding: 1rem;
     background: url('./assets/map.png') center/100% auto no-repeat, 
-                linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
+                linear-gradient(135deg, #034833 0%, #034833 100%);
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
